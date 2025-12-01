@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AAU Support - Connecting to Agent</title>
+    <link rel="stylesheet" href="styles/style.css">
+</head>
+<body class="chat-interface">
+    <div class="chat-container">
+        <div class="chat-header">
+            <h3>AAU Support</h3>
+            <span class="status-dot connecting"></span>
+        </div>
+
+        <div class="chat-messages" id="chatMessages">
+            <!-- Previous conversation -->
+            <div class="message user-message">
+                <div class="message-content">
+                    I'm getting error code 125 during registration
+                </div>
+            </div>
+            
+            <!-- Bot handoff message -->
+            <div class="message bot-message">
+                <div class="message-content">
+                    I understand you're having technical issues. Let me connect you with a live support agent who can help resolve this.
+                </div>
+            </div>
+
+            <!-- Connection status -->
+            <div class="system-message">
+                <div class="connecting-animation">
+                    <div class="connecting-dots">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                    Connecting you with an agent...
+                </div>
+            </div>
+
+            <!-- Success connection -->
+            <div class="system-message success" id="successMessage" style="display: none;">
+                ✓ Connected! You're now chatting with Agent Alex
+            </div>
+
+            <!-- Agent introduction -->
+            <div class="message agent-message" id="agentMessage" style="display: none;">
+                <div class="message-content">
+                    Hi! I see you're experiencing error code 125. This usually means there's a conflict with your course selection. Let me check your account...
+                </div>
+                <div class="message-time">Just now</div>
+            </div>
+        </div>
+
+        <div class="message-input">
+            <input type="text" id="messageInput" placeholder="Type your message to the agent..." disabled>
+            <button onclick="proceedToResolution()">Continue</button>
+        </div>
+    </div>
+
+    <script src="scripts/script.js"></script>
+    <script>
+        // Simulate connection process
+        setTimeout(() => {
+            document.getElementById('successMessage').style.display = 'block';
+            setTimeout(() => {
+                document.getElementById('agentMessage').style.display = 'block';
+                document.getElementById('messageInput').disabled = false;
+            }, 1000);
+        }, 2000);
+    </script>
+</body>
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AAU Support - Issue Resolved</title>
+    <link rel="stylesheet" href="styles/style.css">
+</head>
+<body class="chat-interface">
+    <div class="chat-container">
+        <div class="chat-header">
+            <h3>AAU Support - Agent Alex</h3>
+            <span class="status-dot online"></span>
+        </div>
+
+        <div class="chat-messages">
+            <!-- Previous messages -->
+            <div class="message agent-message">
+                <div class="message-content">
+                    I've identified the issue - two of your selected courses have scheduling conflicts. I've temporarily bypassed the error so you can choose alternative courses.
+                </div>
+            </div>
+
+            <div class="message user-message">
+                <div class="message-content">
+                    Thank you! That worked. I can now select different courses.
+                </div>
+            </div>
+
+            <div class="message agent-message">
+                <div class="message-content">
+                    Great! Is there anything else I can help you with today?
+                </div>
+            </div>
+
+            <!-- Resolution confirmation -->
+            <div class="system-message success">
+                ✓ Issue marked as resolved
+            </div>
+        </div>
+
+        <!-- Rating System -->
+        <div class="rating-section">
+            <h4>How would you rate this support experience?</h4>
+            <div class="star-rating">
+                <span class="star" onclick="rateSupport(1)">⭐</span>
+                <span class="star" onclick="rateSupport(2)">⭐</span>
+                <span class="star" onclick="rateSupport(3)">⭐</span>
+                <span class="star" onclick="rateSupport(4)">⭐</span>
+                <span class="star" onclick="rateSupport(5)">⭐</span>
+            </div>
+            <button class="back-to-portal" onclick="goBackToPortal()">Back to Portal</button>
+        </div>
+    </div>
+
+    <script src="scripts/script.js"></script>
+</body>
+</html>
