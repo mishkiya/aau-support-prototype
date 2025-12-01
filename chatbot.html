@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AAU Support Assistant</title>
+    <link rel="stylesheet" href="styles/style.css">
+</head>
+<body class="chat-interface">
+    <div class="chat-container">
+        <!-- Chat Header -->
+        <div class="chat-header">
+            <h3>AAU Support Assistant</h3>
+            <span class="status-dot online"></span>
+        </div>
+
+        <!-- Chat Messages -->
+        <div class="chat-messages" id="chatMessages">
+            <div class="message bot-message">
+                <div class="message-content">
+                    Hello! I'm here to help with portal questions. What can I help you with today?
+                </div>
+                <div class="message-time">Just now</div>
+            </div>
+        </div>
+
+        <!-- Quick Replies -->
+        <div class="quick-replies" id="quickReplies">
+            <button class="quick-reply" onclick="sendQuickReply('When is registration deadline?')">
+                When is registration deadline?
+            </button>
+            <button class="quick-reply" onclick="sendQuickReply('How to check my grades?')">
+                How to check my grades?
+            </button>
+            <button class="quick-reply" onclick="sendQuickReply('Password reset help')">
+                Password reset help
+            </button>
+            <button class="quick-reply" onclick="sendQuickReply('Contact IT support')">
+                Contact IT support
+            </button>
+        </div>
+
+        <!-- Message Input -->
+        <div class="message-input">
+            <input type="text" id="messageInput" placeholder="Type your message..." 
+                   onkeypress="handleKeyPress(event)">
+            <button onclick="sendMessage()">Send</button>
+        </div>
+    </div>
+
+    <script src="scripts/script.js"></script>
+</body>
+</html>
